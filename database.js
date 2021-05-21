@@ -1,4 +1,4 @@
-const mysql = require('../controller/node_modules/mysql');
+const mysql = require('mysql');
 
 const mysqlConnection = mysql.createPool({
     connectionLimit: 2,
