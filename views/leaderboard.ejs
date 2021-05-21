@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="stylesheet.css"> -->
+    <title>web app</title>
+</head>
+<style>
+    main {
+        width: 70%;
+        margin: 50px auto;
+        text-align: center;
+        background: rgb(209, 211, 112);
+    }
+    
+    table {
+        margin: 50px auto;
+        background-color: blue;
+    }
+    
+    table, th, td {
+        border-collapse: collapse;
+        border: 1px solid #000;
+        
+    }
+    
+    th, td {
+        padding: 5px;
+    }
+    #print_row{
+        background-color: rgb(245, 245, 187);
+    }
+    #tablehead{
+        color: white;
+    }
+</style>
+<body>
+    <main>    
+        <div class="container">
+            <a href="/"> <button id="leaderboard_btnid" >Home</button> </a>
+            <a href="/leaderboard"> <button id="marks_btnid" >Leaderboard</button> </a>
+            <a href="/marks"> <button id="marks_btnid" >Enter Marks</button> </a>
+        </div>
+
+        <br><br><br>
+        <form action="/search" method="POST">
+            <input placeholder="search by name" name="search_input" id="search_input" required autofocus>
+            <button id="search-btn" type="submit">Search</button>
+        </form>
+        
+           
+       
+
+        <table id="table">
+            <thead id="tablehead">
+                <th>Roll No.
+                    <a href="/leaderboard/roll_no"> <button> sort</button></a>
+                </th>
+                <th>Name</th>
+                <th>Maths
+                    <a href="/leaderboard/maths_marks"> <button> sort</button></a>
+                </th>
+                <th>Physics
+                    <a href="/leaderboard/physics_marks"> <button> sort</button></a>
+                </th>
+                <th>Chemistry
+                    <a href="/leaderboard/chemistry_marks"> <button> sort</button></a>
+                </th>
+                <th>Total</th>
+                <th>Percentage
+                    <a href="/leaderboard/percentage"> <button> sort</button></a>
+                </th>
+                <th>Rank</th>
+            </thead>
+            <tbody>
+                <thead>
+                    <% var i=1;%>
+                    <% rows.forEach(function(cur_row){%>
+                    <% //console.log(cur_row);%>
+                    
+                    <tr id="print_row">
+                        
+                        <th><%=cur_row.roll_no%></th>
+                        <th><%=cur_row.name%></th>
+                        <th><%=cur_row.maths_marks%></th>
+                        <th><%=cur_row.physics_marks%></th>
+                        <th><%=cur_row.chemistry_marks%></th>
+                        <th><%=cur_row.total_marks%></th>
+                        <th><%=cur_row.percentage%></th>
+                        <th><%=i %></th>
+                    </tr>
+                    <% i+=1;%>
+                <%//console.log("yes")%>
+                <%});%>
+                </thead>
+            </tbody>
+        </table>
+        
+        <form action="/delete" method="POST">
+            <h3>Delete entry:</h3>
+            <label for="delete_input" class="sr-only">Enter roll no</label>
+            <input placeholder="Delete by Roll No" name="delete_input" id="delete_input" required autofocus>
+            <button id="delete-btn">Delete</button>
+        </form>
+        <!-- <section hidden id="update-row">
+            <label>Name:</label>
+            <input type="text" id="update-name-input">
+            <button id="update-row-btn">Update</button>
+        </section> -->
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="index.js"></script>    -->
+</body>
+</html>
