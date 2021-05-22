@@ -64,5 +64,29 @@ studentsModel.searchStudent=function(name,result){
     });
 }
 
+studentsModel.searchRollno=function(roll_no,result){
+    var sql="select * from students where roll_no = ";
+    sql+=roll_no;
+    mysqlConnection.query(sql,function(err,rows,fields){
+        if(err) {
+            return result(err,null);
+        }
+        else{
+         return result(null,rows);
+        }
+    });
+}
+
+studentsModel.update=function(newInfo,result){
+    var sql="update students set name = ?, maths_marks = ?, physics_marks = ?, chemistry_marks=?,total_marks=?,percentage=? where roll_no=?";
+    mysqlConnection.query(sql,newInfo,function(err,rows,fields){
+        if(err) {
+            return result(err,null);
+        }
+        else{
+         return result(null,rows);
+        }
+    });
+}
 
 module.exports = studentsModel;

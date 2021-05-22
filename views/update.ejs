@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <a href="/"> <button id="leaderboard_btnid" >Home</button> </a>
+
+    <a href="/leaderboard"> <button id="marks_btnid" >Leaderboard</button> </a>
+   </div>
+
+
+  <form action="/update/<%=rows[0].roll_no %>" method="post" class="form-signin" style="margin-top:100px;">
+   
+    
+    <label for="input_name" class="sr-only">Name</label>
+    <input type="text"  class="form-control" id="input_name" name="name" placeholder="Name" value = <%=rows[0].name%> required autofocus><br>
+
+    <label for="input_maths_marks" class="sr-only">Maths Marks</label>
+    <input type="number"  class="form-control" id="input_maths_marks" name="maths_marks" value = <%=rows[0].maths_marks%> required autofocus><br>
+
+    <label for="input_physics_marks" class="sr-only">Physics Marks</label>
+    <input type="numer"  class="form-control" id="input_physics_marks" name="physics_marks" value = <%=rows[0].physics_marks%> required autofocus><br>
+
+    <label for="input_chemistry_marks" class="sr-only">Chemistry Marks</label>
+    <input type="number"  class="form-control" id="input_chemistry_marks" name="chemistry_marks" value = <%=rows[0].chemistry_marks%> required autofocus><br>
+   
+    
+    <div class="checkbox mb-3">
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    <a href="/marks"><button>Cancel</button></a>
+
+  </form>
+    <script ></script>
+</body>
+</html>

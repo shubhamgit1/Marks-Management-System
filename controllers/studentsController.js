@@ -13,10 +13,7 @@ studentsController.show=function(req,res,next){
         if(err){
                 throw err;
         }else{
-            console.log("entered");
-            // console.log(rows);
             res.render(prePath+'leaderboard.ejs',{rows:rows});
-            console.log("completed");
         }
        
     });
@@ -48,6 +45,46 @@ studentsController.add = function(req,res){
     });
     console.log(req.body.roll_no);
 };
+
+studentsController.searchRollno=function(req,res){
+    var roll_no=req.body.update_input;
+    studentsModel.searchRollno(roll_no,function(err,rows,fiels){
+        if(err){
+            console.log(err);
+        }
+        else{
+            console.log("successfully searched");
+            if(rows.length>0){
+                res.render(prePath+'update',{rows:rows});
+            }
+            else{
+                res.redirect('/marks');
+                console.log('This roll no does not exist')
+            }
+        }
+    })
+};
+
+studentsController.update=function(req,res){
+    var r=req.params.roll_no;
+    var n=req.body.name;
+    var m=parseInt(req.body.maths_marks);
+    var p=parseInt(req.body.physics_marks);
+    var c=parseInt(req.body.chemistry_marks);
+    var t=m+p+c;
+    var pt=t*100/300;
+    var newInfo=[n,m,p,c,t,pt,r];
+    studentsModel.update(newInfo,function(err,rows,fiels){
+        if(err){
+            console.log(err);
+        }
+        else{
+            console.log("successfully updated");
+            console.log(rows);
+            res.redirect("/leaderboard");
+        }
+    })
+}
 
 studentsController.sort = function(req,res){
     
