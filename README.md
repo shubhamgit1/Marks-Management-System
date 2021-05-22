@@ -13,6 +13,7 @@ Student's marks management system
    - To check the plugin of root run **select user, authentication_string, plugin from mysql.user;**
    - If plugin of root is auth_socket, change it to mysql_native_password by running **ALTER USER 'root'@'localhost'IDENTIFIED WITH mysql_native_password by 'sc123456';**
    - To make the changes effectively and immediately run **FLUSH PRIVILEGES;**
+   - Now you can open mysql using command **sudo mysql -u root -p**
 3. Clone this repo.<br>
 4. Open the terminal and go to the main directory of the project i.e. 'Almabetter'.<br>
 5. Initialise the project by running the command **npm init** in the terminal.<br>
