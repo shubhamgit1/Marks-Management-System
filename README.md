@@ -3,7 +3,7 @@ Student's marks management system
 
 ## Steps to run the application in localhost
 1. Follow the below instructions to install the NodeJS in Ubuntu
-   - Open the terminal and run **curl -fsSL [https://deb.nodesource.com/setup_14.x]() | sudo -E bash -**
+   - Open the terminal and run **curl -fsSL https://<span></span>deb.nodesource.com/setup_14.x | sudo -E bash -**
    - Run **sudo apt-get install -y nodejs**
 2. Follow the below instructions to install mysql-server in Ubuntu
    - Run **sudo apt install mysql-server** in terminal.
