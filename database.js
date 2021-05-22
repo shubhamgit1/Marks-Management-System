@@ -5,14 +5,9 @@ var mysqlConnection = mysql.createConnection({
     password: 'sc123456',
 });
 
-mysqlConnection.query("CREATE DATABASE IF NOT EXISTS mydb28");
+mysqlConnection.query("CREATE DATABASE IF NOT EXISTS mydb35");
 
-mysqlConnection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'sc123456',
-    database: 'mydb28',
-});
+mysqlConnection.query("use mydb35");
 
 var sql = "CREATE TABLE IF NOT EXISTS students (roll_no int not null,\
                                                 name varchar(50) not null,\
@@ -21,6 +16,7 @@ var sql = "CREATE TABLE IF NOT EXISTS students (roll_no int not null,\
                                                 chemistry_marks int not null,\
                                                 total_marks int not null,\
                                                 percentage int not null)";
+
 
 mysqlConnection.query(sql);
 
