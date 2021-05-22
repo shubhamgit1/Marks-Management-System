@@ -1,9 +1,9 @@
 # Almabetter
 Student's marks management system
-1. A numbered list
-              1. A nested numbered list
-              2. Which is numbered
-2. Which is numbered
+- A numbered list
+  - A nested numbered list
+  - Which is numbered
+- Which is numbered
 ## Steps to run the application in localhost
 1.Install NodeJS and mysql server in your system.<br>
 2.Follow the below instruction to install mysql-server<br>
