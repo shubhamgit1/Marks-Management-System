@@ -17,4 +17,5 @@ Student's marks management system
 3. Clone this repo.<br>
 4. Open the terminal and go to the main directory of the project i.e. 'Almabetter'.<br>
 5. Install all the packages mentioned in the 'dependencies' section of package.json using the command **npm install** <br>
-6. Run the application by running the command **node app.js** and it will automatically create the required database and table.<br>
+6. If you have mysql-server password other than 'sc123456', then go to the file database.js and change password from 'sc123456' to your password at line 5.
+7. Run the application by running the command **node app.js** and it will automatically create the required database and table.<br>
