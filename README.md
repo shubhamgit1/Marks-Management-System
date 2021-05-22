@@ -5,11 +5,11 @@ Student's marks management system
    - Which is numbered
 2. Which is numbered
 ## Steps to run the application in localhost
-1.Install NodeJS and mysql server in your system.<br>
-2.Follow the below instruction to install mysql-server<br>
+1. Install NodeJS and mysql server in your system.<br>
+2. Follow the below instruction to install mysql-server<br>
    -sudo install mysql-server
    -sdfasd
-3.Clone the repo.<br>
+3. Clone the repo.<br>
 4.Open the terminal and go to the main directory of the project i.e. 'Almabetter'.<br>
 4.Initialise the project by running the command 'npm init' in the terminal.<br>
 5.Install all the packages mentioned in the 'dependencies' section of package.json <br>
