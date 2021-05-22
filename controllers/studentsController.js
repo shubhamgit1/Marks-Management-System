@@ -53,7 +53,7 @@ studentsController.searchRollno=function(req,res){
             console.log(err);
         }
         else{
-            console.log("successfully searched");
+            // console.log("successfully searched");
             if(rows.length>0){
                 res.render(prePath+'update',{rows:rows});
             }
@@ -80,7 +80,7 @@ studentsController.update=function(req,res){
         }
         else{
             console.log("successfully updated");
-            console.log(rows);
+            // console.log(rows);
             res.redirect("/leaderboard");
         }
     })
@@ -94,8 +94,7 @@ studentsController.sort = function(req,res){
             console.log("err");
         }
         else{
-            console.log('successful query of id');
-            // console.log(rows); 
+            console.log('successfully sorted'); 
             res.render(prePath+'leaderboard',{rows:rows});
         }
     });

@@ -12,13 +12,13 @@
 
     <a href="/leaderboard"> <button id="marks_btnid" >Leaderboard</button> </a>
    </div>
-    <h1>Marks of students</h1>
+    <!-- <h1>Marks of students</h1> -->
     
     <form action="/update" method="POST">
       <h2>Update Information</h2>
       <p>Enter the roll no. of student whose information has to be updated </p>
       <label for="input_roll_no" class="sr-only">Roll No.</label>
-      <input name="update_input" id="update_input" required autofocus>
+      <input type="number" name="update_input" id="update_input" required autofocus>
       <button id="search-btn" type="submit">Submit</button>
   </form>
 
