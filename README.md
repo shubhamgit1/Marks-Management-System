@@ -11,7 +11,7 @@ Student's marks management system
    - To set root password run **sudo mysql_secure_installation**
    - Open mysql by running **sudo mysql**
    - To check the plugin of root run **select user, authentication_string, plugin from mysql.user;**
-   - If plugin is auth_socket, change it to mysql_native_password by running **ALTER USER 'root'@'localhost'IDENTIFIED WITH mysql_native_password by 'sc123456';**
+   - If plugin of root is auth_socket, change it to mysql_native_password by running **ALTER USER 'root'@'localhost'IDENTIFIED WITH mysql_native_password by 'sc123456';**
    - To make the changes effectively and immediately run **FLUSH PRIVILEGES;**
 3. Clone this repo.<br>
 4. Open the terminal and go to the main directory of the project i.e. 'Almabetter'.<br>
