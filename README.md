@@ -15,6 +15,6 @@ Student's marks management system
    - To make the changes effectively and immediately run **FLUSH PRIVILEGES;**
 3. Clone this repo.<br>
 4. Open the terminal and go to the main directory of the project i.e. 'Almabetter'.<br>
-5. Initialise the project by running the command 'npm init' in the terminal.<br>
+5. Initialise the project by running the command **npm init** in the terminal.<br>
 6. Install all the packages mentioned in the 'dependencies' section of package.json using the command **npm install** <br>
-7. Run the application by running the command 'node app.js' and it will automatically create the required database and table.<br>
+7. Run the application by running the command **node app.js** and it will automatically create the required database and table.<br>
