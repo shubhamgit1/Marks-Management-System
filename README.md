@@ -6,7 +6,7 @@ Student's marks management system
 2. Which is numbered
 ## Steps to run the application in localhost
 1. Install NodeJS and mysql server in your system.<br>
-2. Follow the below instruction to install mysql-server<br>
+2. Follow the below instruction to install mysql-server
    -sudo install mysql-server
    -sdfasd
 3. Clone the repo.<br>
