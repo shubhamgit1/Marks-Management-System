@@ -1,5 +1,5 @@
-# Almabetter
-Student's marks management system
+# Students-Marks-Management-System
+This is an implementation of student's marks management system
 
 ## Steps to run the application in localhost
 1. Follow the below instructions to install the NodeJS in Ubuntu
